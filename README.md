@@ -25,18 +25,18 @@ execute `./mvnw clear package `
 ##Running the example
 Run the services in the following order:
 1. Start the RabbitMQ broker
-    1. `./rabbitmq-server -detached ` to run the broker
-    2. `./rabbitmqctl status` to see its status
-    3. `./rabbitmqctl stop` to stop it
-    4. You can monitor the broker in the following address: `http://localhost:15672/`
+    * `./rabbitmq-server -detached ` to run the broker
+    * `./rabbitmqctl status` to see its status
+    * `./rabbitmqctl stop` to stop it
+    * You can monitor the broker in the following address: `http://localhost:15672/`
 2. Start one or more *Sink* services
-    1. `java -jar sink/target/sink-0.0.1-SNAPSHOT.jar` to run the first one with default parameters
-    2. `java -Dserver.port=8082 -jar sink/target/sink-0.0.1-SNAPSHOT.jar` to run a second one
+    * `java -jar sink/target/sink-0.0.1-SNAPSHOT.jar` to run the first one with default parameters
+    * `java -Dserver.port=8082 -jar sink/target/sink-0.0.1-SNAPSHOT.jar` to run a second one
     in port 8082 and with the same *consumer group*
-    3. `java -Dserver.port=8083 -Dspring.cloud.stream.bindings.input.group=other -jar sink/target/sink-0.0.1-SNAPSHOT.jar
+    * `java -Dserver.port=8083 -Dspring.cloud.stream.bindings.input.group=other -jar sink/target/sink-0.0.1-SNAPSHOT.jar
 ` to run a third one in a different port and different consumer group
 3. Start one single source
-    1. `java -jar source/target/source-0.0.1-SNAPSHOT.jar
+    * `java -jar source/target/source-0.0.1-SNAPSHOT.jar
     `
     
 ##Observe the behaviour
