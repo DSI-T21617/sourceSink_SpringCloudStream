@@ -23,7 +23,7 @@ execute `./mvnw clear package `
 . It will create a jar file in a directory called *target*
 
 ##Running the example
-**Warning: ** You'll need to download and install the RabbitMQ message broker in 
+**Warning:** You'll need to download and install the RabbitMQ message broker in 
 your local machine. https://www.rabbitmq.com
 
 Run the services in the following order:
