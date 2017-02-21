@@ -24,6 +24,7 @@ execute `./mvnw clear package `
 
 ##Running the example
 Run the services in the following order:
+
 1. Start the RabbitMQ broker
     * `./rabbitmq-server -detached ` to run the broker
     * `./rabbitmqctl status` to see its status
