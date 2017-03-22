@@ -1,4 +1,4 @@
-#Publisher/Subscriber example with Spring Cloud Stream
+# Publisher/Subscriber example with Spring Cloud Stream
 This example is composed of two services, the publisher and the subscriber. The former publishes
 the current date and time to a stream every second, while the later receives the messages and
 prints them on the console. In the example the publisher is called **Source** while the 
@@ -10,7 +10,7 @@ that is created with the first *Sink*. Note that if the *Source* is created befo
  the queue is persistent. That is, even if there aren't any *Sinks* messages will be stored
  by the broker.
  
-##Project Structure
+## Project Structure
 There are two modules one for the publisher called *Source* and another for the subscriber
 called *Sink*. These modules are independent application that can be build and run independently.
 
@@ -22,7 +22,7 @@ a console window. Navigate to <project_directory>/sink or <project_directory>/so
 execute `./mvnw clear package `
 . It will create a jar file in a directory called *target*
 
-##Running the example
+## Running the example
 **Warning:** You'll need to download and install the RabbitMQ message broker in 
 your local machine. https://www.rabbitmq.com
 
@@ -43,7 +43,7 @@ Run the services in the following order:
     * `java -jar source/target/source-0.0.1-SNAPSHOT.jar
     `
     
-##Observe the behaviour
+## Observe the behaviour
 Assuming that the *broker* and the *source* are stated:
 
 * When the first *sink* is started  (as described above) it begins to consume all the messages
@@ -58,7 +58,7 @@ broker. It the a *sink* is run it consumes all the past non consumed messages.
 is run again the *sink* receives those messages. Obviously the messages sent by the *source*
 while the *broker* was down are lost
 
-##Credits
+## Credits
 * This example is based (almost copied) from: https://github.com/spring-cloud/spring-cloud-stream-samples
 
 
